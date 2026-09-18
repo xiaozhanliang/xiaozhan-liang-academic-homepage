@@ -115,6 +115,7 @@
   .timeline-list time { color: var(--accent-dark); font-size: 12px; font-weight: 600; }
   .timeline-list h3 { margin: 0 0 2px; font-size: 15px; font-weight: 700; }
   .timeline-list p { color: var(--muted); font-size: 12px; }
+  .timeline-list small { color: #8b929a; font-size: 11px; }
 
   .interest-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
   .interest-grid article { position: relative; isolation: isolate; min-height: 300px; padding: 24px 22px; overflow: hidden; border-right: 1px solid var(--line); background: linear-gradient(180deg, #fff 0%, #fbfdfb 100%); }
@@ -193,7 +194,7 @@
     <header class="site-nav">
       <div class="nav-inner">
         <div class="social-links" aria-label="Academic profiles">
-          <a href="mailto:dearzhan1091@163.com" title="Email Xiaozhan Liang">Email</a><a href="https://scholar.google.com.hk/citations?hl=zh-CN&amp;user=sQUfAf0AAAAJ" target="_blank" rel="noreferrer" title="Google Scholar">Scholar</a><a href="https://orcid.org/0000-0001-9874-1971" target="_blank" rel="noreferrer" title="ORCID">ORCID</a>
+          <a href="mailto:dearzhan109@163.com" title="Email Xiaozhan Liang">Email</a><a href="https://scholar.google.com.hk/citations?hl=zh-CN&amp;user=sQUfAf0AAAAJ" target="_blank" rel="noreferrer" title="Google Scholar">Scholar</a><a href="https://orcid.org/0000-0001-9874-1971" target="_blank" rel="noreferrer" title="ORCID">ORCID</a>
         </div>
 
         <div class="nav-right">
@@ -222,7 +223,7 @@
 
             <p>Beihang University</p>
 
-            <p>Beijing, China</p><a href="mailto:dearzhan1091@163.com">dearzhan1091@163.com</a>
+            <p>Beijing, China</p><a href="mailto:dearzhan109@163.com">dearzhan109@163.com</a>
           </div>
         </aside>
 
@@ -559,7 +560,8 @@
             <div>
               <h3>Undergraduate Studies</h3>
 
-              <p>Beihang University · Beijing, China</p>
+              <p>Beihang University · Beijing, China<br>
+              <small>Beijing Outstanding Graduate Award</small></p>
             </div>
           </article>
         </div>
@@ -597,12 +599,6 @@
                 <span>2023</span>
 
                 <p>Beijing Outstanding Graduation Thesis/Design Award</p>
-              </li>
-
-              <li>
-                <span>2023</span>
-
-                <p>Beijing Outstanding Graduate Award</p>
               </li>
 
               <li>
@@ -657,7 +653,7 @@
 
         <p>I am always happy to discuss research ideas, interdisciplinary collaborations, and opportunities related to augmented and mixed reality or interaction design.</p>
 
-        <p class="contact-placeholder"><a href="mailto:dearzhan1091@163.com">dearzhan1091@163.com</a> <span aria-hidden="true">·</span> <a href="https://scholar.google.com.hk/citations?hl=zh-CN&amp;user=sQUfAf0AAAAJ" target="_blank" rel="noreferrer">Google Scholar</a> <span aria-hidden="true">·</span> <a href="https://orcid.org/0000-0001-9874-1971" target="_blank" rel="noreferrer">ORCID</a></p>
+        <p class="contact-placeholder"><a href="mailto:dearzhan109@163.com">dearzhan109@163.com</a> <span aria-hidden="true">·</span> <a href="https://scholar.google.com.hk/citations?hl=zh-CN&amp;user=sQUfAf0AAAAJ" target="_blank" rel="noreferrer">Google Scholar</a> <span aria-hidden="true">·</span> <a href="https://orcid.org/0000-0001-9874-1971" target="_blank" rel="noreferrer">ORCID</a></p>
       </section>
     </div>
 
@@ -697,7 +693,7 @@
       educationTitle: text('#experience > h2 a').textContent,
       educationTimes: all('#experience time').map((node) => node.textContent),
       educationHeadings: all('#experience h3').map((node) => node.textContent),
-      educationLines: all('#experience article p').map((node) => node.textContent),
+      educationLines: all('#experience article p').map((node) => node.innerHTML),
       awardsTitle: text('#awards > h2 a').textContent,
       awardColumns: all('#awards .service-columns > div > h3').map((node) => node.textContent),
       honors: all('#awards .service-columns > div:first-child li p').map((node) => node.innerHTML),
@@ -727,9 +723,9 @@
       paperTitles: ['混合现实中的空间用户界面设计：系统性文献综述', '赋予角色生命力：通过将原创角色构建为生成式人工智能智能体，提升叙事作品中原创角色的可信度', '基于物理与语义驱动的混合现实日常物体智能界面转化', '面向大尺寸平板增强现实的双拇指三维交互框架设计与评估', '数字生存时代非物质文化遗产展示与传播的创新生态框架', '白骨精重生：生成式人工智能驱动的扩展现实角色扮演游戏设计', 'Magic Ball：面向混合现实多维信息展示与交互的地球仪系统', '提升移动增强现实交互体验：基于用户心智模型构建的设计框架', '“踏上旅程 · 拥抱宇宙”：基于混合现实球形实体用户界面的天文教育交互系统', '混合现实分布式协作引导系统的情感化设计与用户研究'],
       paperNotes: ['获 IEEE ISMAR 2026 录用 · 收录于 IEEE Transactions on Visualization and Computer Graphics · 第一作者', 'DRS 2026 · 英国爱丁堡 · 第一作者', 'CHI Extended Abstracts 2025 · 日本横滨 · CCF-A · 第一作者', 'International Journal of Human–Computer Interaction · 第一作者', 'Cumulus Conference 2025 · 法国南特 · 第一作者', 'SIGGRAPH Asia 2024 Posters · 日本东京 · CCF-A · 第一作者', 'CHI Extended Abstracts 2024 · 美国夏威夷檀香山 · CCF-A', 'HCI International 2024 – Late Breaking Papers · 美国华盛顿特区 · EI 收录 · 第一作者', 'SIGGRAPH Asia 2023 XR · 澳大利亚悉尼 · CCF-A · 第一作者', 'Chinese CHI 2022 · 中国广州 · 第一作者'],
       doiStatuses: ['即将公布', '暂无'],
-      educationTitle: '教育经历', educationTimes: ['至今', '已完成'], educationHeadings: ['设计学博士研究生', '本科阶段'], educationLines: ['新媒体艺术与设计学院 · 北京航空航天大学 · 中国北京', '北京航空航天大学 · 中国北京'],
+      educationTitle: '教育经历', educationTimes: ['至今', '已完成'], educationHeadings: ['设计学博士研究生', '本科阶段'], educationLines: ['新媒体艺术与设计学院 · 北京航空航天大学 · 中国北京', '北京航空航天大学 · 中国北京<br><small>北京市优秀毕业生</small>'],
       awardsTitle: '荣誉与奖励', awardColumns: ['荣誉与奖励', '学术服务与学生工作'],
-      honors: ['入选青年科技人才培育工程<br><small>中国科学技术协会</small>', '国家奖学金<br><small>中国学生最高级别国家奖学金</small>', '北京市“挑战杯”全国大学生课外学术科技作品竞赛金奖', '北京市优秀毕业论文（设计）', '北京市优秀毕业生', '北京航空航天大学沈元奖章<br><small>北京航空航天大学最高荣誉</small>', '北京航空航天大学五四奖章', '小米特等奖学金'],
+      honors: ['入选青年科技人才培育工程<br><small>中国科学技术协会</small>', '国家奖学金<br><small>中国学生最高级别国家奖学金</small>', '北京市“挑战杯”全国大学生课外学术科技作品竞赛金奖', '北京市优秀毕业论文（设计）', '北京航空航天大学沈元奖章<br><small>北京航空航天大学最高荣誉</small>', '北京航空航天大学五四奖章', '小米特等奖学金'],
       services: ['ACM CHI 2026 Posters 审稿人', '《图学学报》编辑助理', '北京航空航天大学校学生会执行主席'], serviceYears: ['2026', '2026', '学生工作'],
       contactTitle: '联系方式', contactText: '欢迎与我交流研究想法、跨学科合作，以及增强现实、混合现实和交互设计相关机会。', back: '返回顶部 ↑'
     };
@@ -773,7 +769,7 @@
       text('#experience > h2 a').textContent = source.educationTitle;
       updateList('#experience time', source.educationTimes);
       updateList('#experience h3', source.educationHeadings);
-      updateList('#experience article p', source.educationLines);
+      updateList('#experience article p', source.educationLines, true);
       text('#awards > h2 a').textContent = source.awardsTitle;
       updateList('#awards .service-columns > div > h3', source.awardColumns);
       updateList('#awards .service-columns > div:first-child li p', source.honors, true);
